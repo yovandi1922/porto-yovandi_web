@@ -449,9 +449,9 @@ const projectData = {
     4: {
         title: 'Aplikasi Unity AR 3D',
         images: [
-            'img/Unity2.jpeg',
-            'img/Unity3.jpeg',
-            'img/Unity4.jpeg'
+            'img/unity2.jpeg',
+            'img/unity3.jpeg',
+            'img/unity4.jpeg'
         ]
     }
 };
