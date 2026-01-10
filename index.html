@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Web Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="#home">&lt;Fulgentius Yovandi&gt;</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">
+                    <span class="lang-en">Home</span>
+                    <span class="lang-id">Beranda</span>
+                </a></li>
+                <li><a href="#about" class="nav-link">
+                    <span class="lang-en">About</span>
+                    <span class="lang-id">Tentang</span>
+                </a></li>
+                <li><a href="#skills" class="nav-link">
+                    <span class="lang-en">Skills</span>
+                    <span class="lang-id">Keahlian</span>
+                </a></li>
+                <li><a href="#projects" class="nav-link">
+                    <span class="lang-en">Projects</span>
+                    <span class="lang-id">Projek</span>
+                </a></li>
+                <li><a href="#contact" class="nav-link">
+                    <span class="lang-en">Contact</span>
+                    <span class="lang-id">Kontak</span>
+                </a></li>
+                <li class="language-switcher">
+                    <button class="lang-btn active" data-lang-btn="en" title="English" onclick="switchLanguage('en')">
+                        <i class="fas fa-globe"></i> EN
+                    </button>
+                    <button class="lang-btn" data-lang-btn="id" title="Bahasa Indonesia" onclick="switchLanguage('id')">
+                        <i class="fas fa-globe"></i> ID
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="lang-en">Hi, I'am a</span>
+                    <span class="lang-id">Hai, Saya seorang</span>
+                    <span class="gradient-text">Web Developer</span>
+                </h1>
+                <p class="hero-subtitle">
+                    <span class="typing-text"></span>
+                </p>
+                <p class="hero-description lang-en">
+                    Specialist in website development, Laravel-based web applications, and Unity-based interactive media.
+                </p>
+                <p class="hero-description lang-id">
+                    Spesialis dalam pengembangan website, aplikasi web berbasis Laravel, dan media interaktif berbasis Unity.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-briefcase"></i> 
+                        <span class="lang-en">See My Work</span>
+                        <span class="lang-id">Lihat Portfolio</span>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i> 
+                        <span class="lang-en">Contact Me</span>
+                        <span class="lang-id">Hubungi Saya</span>
+                    </a>
+                </div>
+                <!-- <div class="social-links">
+                    <a href="#" class="social-link" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="social-link" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="social-link" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div> -->
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <a href="#about">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="lang-en">About Me</span>
+                    <span class="lang-id">Tentang Saya</span>
+                </h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <img src="img/fotoyopan.jpg" alt="Profile">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3 class="lang-en">Hello! I'am a Web Developer</h3>
+                    <h3 class="lang-id">Hello! Saya seorang Web Developer</h3>
+                    <p class="lang-en">
+                        I am a Web Developer specializing in website development and Laravel-based web applications, with experience in creating interactive media using Unity. I focus on delivering functional, clean, and reliable digital solutions tailored to client needs.
+                    </p>
+                    <p class="lang-id">
+                        Saya adalah seorang Web Developer yang mengkhususkan diri dalam pengembangan website dan aplikasi web berbasis Laravel, dengan pengalaman dalam membuat media interaktif menggunakan Unity. Fokus saya adalah memberikan solusi digital yang fungsional, bersih, dan dapat diandalkan sesuai kebutuhan klien.
+                    </p>
+                    <div class="about-info">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Solo, Central Java, Indonesia</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>yovandifulgentius@gmail.com</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+62 889 0293 4794 </span>
+                        </div>
+                    </div>
+                    <a href="cv/CV WebDeveloper.pdf" download="CV_Fulgentius_Yovandi.pdf" class="btn btn-primary">
+                        <i class="fas fa-download"></i> 
+                        <span class="lang-en">Download CV</span>
+                        <span class="lang-id">Unduh CV</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="lang-en">Skills & Expertise</span>
+                    <span class="lang-id">Keahlian & Expertise</span>
+                </h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">
+                    <span class="lang-en">Technologies I Master</span>
+                    <span class="lang-id">Teknologi yang Saya Kuasai</span>
+                </p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3>HTML5</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="95"></div>
+                    </div>
+                    <span class="skill-percentage">95%</span>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <h3>CSS3</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="90"></div>
+                    </div>
+                    <span class="skill-percentage">90%</span>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <h3>JavaScript</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="85"></div>
+                    </div>
+                    <span class="skill-percentage">85%</span>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-php"></i>
+                    </div>
+                    <h3>PHP</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="88"></div>
+                    </div>
+                    <span class="skill-percentage">88%</span>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-laravel"></i>
+                    </div>
+                    <h3>Laravel</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="85"></div>
+                    </div>
+                    <span class="skill-percentage">85%</span>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>MySQL</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="82"></div>
+                    </div>
+                    <span class="skill-percentage">82%</span>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-bootstrap"></i>
+                    </div>
+                    <h3>Bootstrap</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="88"></div>
+                    </div>
+                    <span class="skill-percentage">88%</span>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-git-alt"></i>
+                    </div>
+                    <h3>Git</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="80"></div>
+                    </div>
+                    <span class="skill-percentage">80%</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="lang-en">Portfolio Projects</span>
+                    <span class="lang-id">Portfolio Projek</span>
+                </h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">
+                    <span class="lang-en">Selected Projects</span>
+                    <span class="lang-id">Beberapa Projek Pilihan</span>
+                </p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-project="1">
+                    <div class="project-image">
+                        <img src="img/login web_LKS.png" alt="Project 1">
+                        <div class="project-overlay">
+                            <button class="project-view-btn" data-project="1">
+                                <i class="fas fa-images"></i>
+                                <span class="lang-en">View Gallery</span>
+                                <span class="lang-id">Lihat Galeri</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="lang-en">Government Agency Website</h3>
+                        <h3 class="lang-id">Website Instansi Pemerintah</h3>
+                        <p class="lang-en">This Government Agency Website is built using native PHP to manage the submission and issuance of permits digitally. The system supports four types of users: Administrator, Officer, Department Head, and Citizen, each with their own functions ranging from submission to approval.</p>
+                        <p class="lang-id">Website Instansi Pemerintah ini dibangun menggunakan PHP native untuk mengelola pengajuan dan penerbitan izin secara digital. Sistem ini mendukung empat jenis pengguna: Administrator, Petugas, Kepala Dinas, dan Warga, masing-masing dengan fungsinya sendiri mulai dari pengajuan hingga persetujuan.</p>
+                        <div class="project-tags">
+                            <span class="tag">PHP Native</span>
+                            <span class="tag">MySQL</span>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-project="2">
+                    <div class="project-image">
+                        <img src="img/wisata.png" alt="Project 2">
+                        <div class="project-overlay">
+                            <button class="project-view-btn" data-project="2">
+                                <i class="fas fa-images"></i>
+                                <span class="lang-en">View Gallery</span>
+                                <span class="lang-id">Lihat Galeri</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="lang-en">Company Profile Website - Wisata Karanganyar</h3>
+                        <h3 class="lang-id">Website Company Profile - Wisata Karanganyar</h3>
+                        <p class="lang-en">The Karanganyar Tourism Website showcases various tourist destinations in Karanganyar along with their descriptions. The website also displays maps for each destination and is designed to be responsive and elegant, using HTML, CSS, and JavaScript.</p>
+                        <p class="lang-id">Website Wisata Karanganyar menampilkan berbagai destinasi wisata di Karanganyar beserta deskripsinya. Website ini juga menampilkan peta untuk setiap destinasi dan dirancang responsif dan elegan, menggunakan HTML, CSS, dan JavaScript.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">CSS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-project="3">
+                    <div class="project-image">
+                        <img src="img/hris6.png" alt="Project 3">
+                        <div class="project-overlay">
+                            <button class="project-view-btn" data-project="3">
+                                <i class="fas fa-images"></i>
+                                <span class="lang-en">View Gallery</span>
+                                <span class="lang-id">Lihat Galeri</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="lang-en">Sistem HRIS</h3>
+                        <h3 class="lang-id">Website HRIS</h3>
+                        <p class="lang-en">This website is a web-based employee management system that facilitates integrated work activity management. It features an informative dashboard, daily attendance (clock-in & clock-out), leave and permit applications, overtime recording, work schedules, as well as payroll and pay slips. The system is designed to improve efficiency, transparency, and accuracy in personnel administration.</p>
+                        <p class="lang-id">Website ini merupakan sistem manajemen karyawan berbasis web yang memudahkan pengelolaan aktivitas kerja secara terintegrasi. Tersedia dashboard informatif, absensi harian (clock-in & clock-out), pengajuan cuti dan izin, pencatatan lembur, jadwal kerja, serta penggajian dan slip gaji. Sistem ini dirancang untuk meningkatkan efisiensi, transparansi, dan akurasi administrasi kepegawaian.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">Tailwind CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">php laravel</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-project="4">
+                    <div class="project-image">
+                        <img src="img/unity1.jpeg" alt="Project 4">
+                        <div class="project-overlay">
+                            <button class="project-view-btn" data-project="4">
+                                <i class="fas fa-images"></i>
+                                <span class="lang-en">View Gallery</span>
+                                <span class="lang-id">Lihat Galeri</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="lang-en">Aplikasi AR berbasis Unity </h3>
+                        <h3 class="lang-id">A Unity-based AR application</h3>
+                        <p class="lang-en">A Unity-based AR application that allows users to scan markers or objects to display interactive 3D models, complete with learning materials and quiz questions. The application is designed as an engaging and interactive educational media.</p>
+                        <p class="lang-id">Aplikasi AR berbasis Unity yang memungkinkan pengguna melakukan scan marker/objek untuk menampilkan model 3D interaktif, dilengkapi dengan materi pembelajaran dan soal kuis. Aplikasi ini dirancang sebagai media edukasi yang menarik, interaktif, dan mudah digunakan.</p>
+                        <div class="project-tags">
+                            <span class="tag">Aplikasi Unity</span>
+                            <span class="tag">Blender</span>
+                            <span class="tag">C+</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="lang-en">Contact Me</span>
+                    <span class="lang-id">Hubungi Saya</span>
+                </h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">
+                    <span class="lang-en">Let's work together on your project</span>
+                    <span class="lang-id">Mari bekerja sama untuk projek Anda</span>
+                </p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-whatsapp">
+                    <div class="whatsapp-card">
+                        <div class="whatsapp-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h3>WhatsApp</h3>
+                        <p class="whatsapp-number">+62 889 0293 4794</p>
+                        <a href="https://wa.me/6288902934794" target="_blank" class="btn btn-whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                            <span class="lang-en">Chat on WhatsApp</span>
+                            <span class="lang-id">Chat di WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; Porto Fulgentius Yovandi.</p>
+                <!-- <div class="footer-social">
+                    <a href="#" class="social-link" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="social-link" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="social-link" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div> -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTop" class="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Project Gallery Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Project Gallery</h2>
+                <button class="modal-close" id="closeModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="gallery-grid" id="galleryGrid">
+                    <!-- Images will be loaded dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox for Full Image View -->
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox-close" id="closeLightbox">
+            <i class="fas fa-times"></i>
+        </button>
+        <button class="lightbox-nav lightbox-prev" id="lightboxPrev">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="lightbox-nav lightbox-next" id="lightboxNext">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="lightbox-content">
+            <img id="lightboxImage" src="" alt="Full Image">
+            <div class="lightbox-counter" id="lightboxCounter"></div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-outline" id="cursorOutline"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

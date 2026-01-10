@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Language Switcher</title>
+    <style>
+        body { padding: 50px; font-family: Arial; }
+        .lang-btn { padding: 10px 20px; margin: 10px; cursor: pointer; }
+        .lang-btn.active { background: blue; color: white; }
+        .lang-en { display: inline; }
+        .lang-id { display: none; }
+        body[data-lang="id"] .lang-en { display: none; }
+        body[data-lang="id"] .lang-id { display: inline; }
+    </style>
+</head>
+<body>
+    <h1>Test Language Button</h1>
+    
+    <button class="lang-btn active" data-lang-btn="en">EN</button>
+    <button class="lang-btn" data-lang-btn="id">ID</button>
+    
+    <p>
+        <span class="lang-en">Hello! This is English</span>
+        <span class="lang-id">Halo! Ini Bahasa Indonesia</span>
+    </p>
+    
+    <div id="debug"></div>
+    
+    <script>
+        console.log("Script loaded!");
+        
+        function switchLanguage(lang) {
+            console.log("Switching to:", lang);
+            document.body.setAttribute('data-lang', lang);
+            
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('data-lang-btn') === lang) {
+                    btn.classList.add('active');
+                }
+            });
+            
+            document.getElementById('debug').innerHTML = "Current lang: " + lang;
+        }
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("DOM Ready!");
+            console.log("Buttons found:", document.querySelectorAll('.lang-btn').length);
+            
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const lang = btn.getAttribute('data-lang-btn');
+                    console.log("Button clicked:", lang);
+                    switchLanguage(lang);
+                });
+            });
+            
+            switchLanguage('en');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Language Test</title>
+    <style>
+        body {
+            padding: 50px;
+            font-family: Arial, sans-serif;
+        }
+        
+        .lang-btn {
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            border: 2px solid blue;
+            background: white;
+        }
+        
+        .lang-btn.active {
+            background: blue;
+            color: white;
+        }
+        
+        .lang-en {
+            display: inline;
+        }
+        
+        .lang-id {
+            display: none;
+        }
+        
+        body[data-lang="id"] .lang-en {
+            display: none;
+        }
+        
+        body[data-lang="id"] .lang-id {
+            display: inline;
+        }
+        
+        #status {
+            margin: 20px 0;
+            padding: 20px;
+            background: #f0f0f0;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Language Switcher Test</h1>
+    
+    <div>
+        <button class="lang-btn active" onclick="switchLanguage('en')">EN</button>
+        <button class="lang-btn" onclick="switchLanguage('id')">ID</button>
+    </div>
+    
+    <div id="status">Current language: <span id="current-lang">en</span></div>
+    
+    <h2>
+        <span class="lang-en">Hello! This is English</span>
+        <span class="lang-id">Halo! Ini Bahasa Indonesia</span>
+    </h2>
+    
+    <p>
+        <span class="lang-en">Welcome to my portfolio website</span>
+        <span class="lang-id">Selamat datang di website portfolio saya</span>
+    </p>
+    
+    <script>
+        function switchLanguage(lang) {
+            console.log('Switching to:', lang);
+            
+            // Set body attribute
+            document.body.setAttribute('data-lang', lang);
+            
+            // Update status display
+            document.getElementById('current-lang').textContent = lang;
+            
+            // Update active button
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            if (lang === 'en') {
+                document.querySelectorAll('.lang-btn')[0].classList.add('active');
+            } else {
+                document.querySelectorAll('.lang-btn')[1].classList.add('active');
+            }
+            
+            alert('Language switched to: ' + lang);
+        }
+    </script>
+</body>
+</html>
