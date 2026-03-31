@@ -463,7 +463,8 @@ const projectData = {
         title: '3D Design - VW Custom Coffee Van',
         images: [
             'img/vw 1.png',
-            'img/vw2.png'
+            'img/vw2.png',
+            'img/vw3.png'
         ]
     }
 };
